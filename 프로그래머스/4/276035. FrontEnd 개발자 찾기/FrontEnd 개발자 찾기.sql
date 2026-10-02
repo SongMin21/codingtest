@@ -1,0 +1,11 @@
+-- 코드를 작성해주세요
+
+-- Developers 테이블에서 Front End 스킬을 가진 개발자 정보 조회
+-- 오름차순 정렬
+
+SELECT DISTINCT D.ID, D.EMAIL, D.FIRST_NAME, D.LAST_NAME
+FROM    DEVELOPERS D
+INNER JOIN SKILLCODES S
+ON S.CODE = (D.SKILL_CODE & S.CODE)
+WHERE S.CATEGORY = "Front End"
+ORDER BY D.ID ASC;

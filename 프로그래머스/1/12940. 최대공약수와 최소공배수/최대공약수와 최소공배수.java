@@ -1,0 +1,16 @@
+class Solution {
+    public int[] solution(int n, int m) {
+        int[] answer = new int[2];
+        int a = m;
+        int b = n;
+        while(b!=0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        
+        answer[0] = a;
+        answer[1] = n*m/a;
+        return answer;
+    }
+}

@@ -1,0 +1,12 @@
+-- 코드를 입력하세요
+-- '경제' 카테고리
+-- 출판일 오름차순
+SELECT          B.BOOK_ID
+              , A.AUTHOR_NAME
+              , B.PUBLISHED_DATE
+FROM            BOOK B
+INNER JOIN      AUTHOR A
+        ON      B.AUTHOR_ID = A.AUTHOR_ID
+WHERE           B.CATEGORY = '경제'
+ORDER BY        B.PUBLISHED_DATE ASC
+;
